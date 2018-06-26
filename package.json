@@ -1,0 +1,23 @@
+{
+  "name": "login-node",
+  "version": "1.0.0",
+  "description": "Challenge Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando Leija V",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-node": "^0.1.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.1.7",
+    "node": "^10.5.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
