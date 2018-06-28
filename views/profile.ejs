@@ -6,12 +6,12 @@
     <title>Profile</title>
 </head>
 <body>
-    <p>Welcome,<%= user.local.username %>!</p>
-    <a href="/">Logout</a></p>
+    <p>Welcome,<%= user.local.nickname %>!</p>
+    <a href="/logout">Logout</a></p>
 
     <strong>id</strong> : <%= user._id %> <br>
     <strong>email</strong> : <%= user.local.email %> <br>
-    <strong>password</strong> : <%= user.local.password %> 
+    <strong>password</strong> : <%= user.local.password %>
 
 </body>
 </html>

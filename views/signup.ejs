@@ -8,13 +8,13 @@
 <body>
     <form action="/signup" method="post">
         Email: <input type="text" name="email" required><br/>
-        <!-- Username: <input type="text" name="user" required><br/> -->
+        Username: <input type="text" name="nickname" required><br/>
         Password: <input type="password" name="password" required><br/>
         <!-- Confirm Password: <input type="password" name="pwd2" required><br/> -->
         <input type="submit" value="Signup">
     </form>
     <p>Already have an account? <a href="/login">Login</a></p>
-    <a href='/'>home</a>
+    Or visit <a href='/'>home</a>
 
     <% if (message.length > 0) { %>
         <div class="alert alert-danger">

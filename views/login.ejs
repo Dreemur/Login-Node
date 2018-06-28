@@ -6,13 +6,12 @@
     <title>Page Title</title>
 </head>
 <body>
-    <form action="/profile" method="post">
-        Username: <input type="text" name="user"><br />
-        Password: <input type="password" name="pass"><br />
-        <input type="submit" />
+    <form action="/login" method="post">
+        Username: <input type="text" name="email"><br />
+        Password: <input type="password" name="password"><br />
+        <input type="submit" value="Login"/>
     </form>
-    You don't have an account? 
-    <a href="/signup">Local Signup</a>
-    <a href='/'>home</a>
+    You don't have an account? <a href="/signup">Local Signup</a>
+    Or visit <a href='/'>home</a>
 </body>
 </html>
