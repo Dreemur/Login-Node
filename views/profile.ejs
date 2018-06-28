@@ -3,10 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Profile</title>
 </head>
 <body>
-    <p>Welcome, ___ !</p>
+    <p>Welcome,<%= user.local.username %>!</p>
     <a href="/">Logout</a></p>
+
+    <strong>id</strong> : <%= user._id %> <br>
+    <strong>email</strong> : <%= user.local.email %> <br>
+    <strong>password</strong> : <%= user.local.password %> 
+
 </body>
 </html>
