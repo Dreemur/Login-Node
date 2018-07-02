@@ -1,5 +1,4 @@
 const LocalStrategy = require('passport-local').Strategy;
-
 const User = require('./user');
 
 //passport save the information of the user using cookies
@@ -30,7 +29,7 @@ module.exports = function (passport) {
       } else {  // create new User
         var newUser = new User();
         newUser.local.email = email;
-        // newUser.local.nickname = nickname;
+        newUser.local.nickname = req.param('username');
         newUser.local.password = newUser.generateHash(password);    // use function create in user.js
         newUser.save(function (err) {
           if (err) { throw err; }
