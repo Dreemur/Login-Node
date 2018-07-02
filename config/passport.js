@@ -30,10 +30,10 @@ module.exports = function (passport) {
         var newUser = new User();
         newUser.local.email = email;
         newUser.local.nickname = req.param('username');
-        newUser.local.password = newUser.generateHash(password);    // use function create in user.js
+        newUser.local.password = newUser.generateHash(password);    // use a function created in user.js
         newUser.save(function (err) {
           if (err) { throw err; }
-          return done(null, newUser);
+          return done(null, newUser); //return new user
         });
       }
     });
@@ -41,17 +41,17 @@ module.exports = function (passport) {
 
   // login
   passport.use('local-login', new LocalStrategy({
-    usernameField: 'email',
+    usernameField: 'nickname',
     passwordField: 'password',
     passReqToCallback: true
   },
-  function (req, email, password, done) {
-    User.findOne({'local.email': email}, function (err, user) {
+  function (req, nickname, password, done) {
+    User.findOne({'local.nickname': nickname}, function (err, user) {
       if (err) { return done(err); }
-      if (!user) {
+      if (!user) {    //doesn't exist user
         return done(null, false, req.flash('loginMessage', 'No user found'))
       }
-      if (!user.validPassword(password)) {
+      if (!user.validPassword(password)) {   // use a function created in user.js
         return done(null, false, req.flash('loginMessage', 'Wrong password'));
       }
       return done(null, user);
