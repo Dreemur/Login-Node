@@ -12,7 +12,13 @@
         Password: <input type="password" name="password"><br />
         <input type="submit" value="Login"/>
     </form>
-    You don't have an account? <a href="/signup">Local Signup</a>
+    You don't have an account? <a href="/signup">Signup</a>
     Or visit <a href='/'>home</a>
+
+    <% if (message.length > 0) { %>
+        <div>
+          <%= message %>
+        </div>
+    <% } %>
 </body>
 </html>
