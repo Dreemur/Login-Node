@@ -4,17 +4,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
+    <% include css/head %>
 </head>
 <body>
     <form action="/login" method="post">
         <!-- Email: <input type="text" name="email"><br /> -->
-        Username: <input type="text" name="nickname"><br />
-        Password: <input type="password" name="password"><br />
-        <input type="submit" value="Login"/>
+        <span class="fa fa-user-circle fa-2x"></span>&nbsp;<input type="text" name="nickname"><br />
+        <span class="fa fa-lock fa-2x"></span>&nbsp;<input type="password" name="password"><br />
+        <input type="submit" value="Login" class="btn btn-dark"/>
+        You don't have an account? <a href="/signup">Signup</a> Or visit <a href='/'>home</a>
     </form>
-    You don't have an account? <a href="/signup">Signup</a>
-    Or visit <a href='/'>home</a>
-
     <% if (message.length > 0) { %>
         <div>
           <%= message %>
