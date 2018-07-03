@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Signup</title>
     <script>
         var check = function() {
         if (document.getElementById('password').value !=
@@ -14,22 +14,47 @@
     }
     </script>
     <% include css/head %>
+    <link href="./css/views_style.css" rel="stylesheet" />
 </head>
 <body>
-    <form action="/signup" method="post">
-        Email: <input type="text" name="email" required><br/>
-        Username: <input type="text" name="username" required><br/>
-        Password: <input type="password" name="password" id="password" required><br/>
-        Confirm Password: <input type="password" onblur='check();' id="confirm_password" required><br/>
-        <input type="submit" value="Signup">
-    </form>
-    <p>Already have an account? <a href="/login">Login</a></p>
-    Or visit <a href='/'>home</a>
-
-    <% if (message.length > 0) { %>
-        <div>
-          <%= message %>
-        </div>
-    <% } %>
+    <div class="container">
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <%= message %>
+            </div>
+        <% } %>
+        <div class="col-sm-6 mx-auto">
+        <div class="card mt-5">
+        <div class="text-center">
+            <div class="card-header">
+                <h1>Sign up</h1>
+            </div>
+            <div class="card-body">
+                <form action="/signup" method="post">
+                    <div class="input-group form-group">
+                        <span class="fa fa-envelope fa-lg fa-fw"></span>
+                        <input class="form-control-sm" placeholder="Email" type="text" name="email" required id="email">
+                    </div>
+                    <div class="input-group form-group">
+                        <span class="fa fa-user-circle fa-lg fa-fw"></span>&nbsp;
+                        <input class="form-control-sm" placeholder="Username"type="text" name="username" required id="username">
+                    </div>
+                    <div class="input-group form-group">
+                        <span class="fa fa-key fa-lg fa-fw"></span>
+                        <input class="form-control-sm" placeholder="Password" type="password" name="password" id="password" required id="password">
+                    </div>
+                    <div class="input-group form-group">
+                        <span class="fa fa-key fa-lg fa-fw"></span>
+                        <input class="form-control-sm" placeholder="Confirm Password" type="password" onblur='check();' id="confirm_password" required><br/>
+                    </div>                
+                    <input type="submit" value="Signup" class="btn btn-dark">
+                </form>
+            </div>
+            <div class="card-footer">
+                <p>Already have an account? <a href="/login">Login</a></p>
+                <p>Or visit <a href='/'>home</a></p>
+            </div>
+    </div>    
 </body>
 </html>

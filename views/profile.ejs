@@ -5,28 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Profile</title>
     <% include css/head %>
+    <link href="./css/views_style.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-light">
+    <nav class="navbar navbar-expand-sm bg-dark" style="color: white">
         <ul class="navbar-nav">
-            <li class="nav-item"><span class="fa fa-user"></span></li>
-            <li class="nav-item">Welcome,<%= user.local.nickname %>!</li>
-            <li class="nav-item"><span class="fa fa-sign-out">
+            <li class="nav-item">
+                <span class="fa fa-user-o fa-fw"></span>
+                Welcome,<%= user.local.nickname %>!
+            </li>
+            <li class="nav-item">
+                <span class="fa fa-sign-out fa-fw"></span>
                 <a href="/logout">Logout</a>
-            </span></li>
+            </li>
         </ul>
     </nav>
-
-    <p>
-    </p>
-    <h1>Profile</h1>
-    <div class="card" style="width:400px">
-        <img class="rounded" src="../images/img_avatar3.png" alt="Card image">
-        <div class="card-body">
-            <h4 class="card-title">Id: <%= user._id %></h4><br>
-            <p class="card-text">Email: <%= user.local.email %></p><br>
-            <p class="card-text">Brief: Some example text.</p>
+    <div class="container">
+    <div class="card">
+        <div class="card-header">
+        <img class="card-img-top img-fluid" src="../images/índice.jpg" alt="Card image">
         </div>
+        <div class="card-body">
+            <p>Id: <%= user._id %></p>
+            <p class="card-text">Email: <%= user.local.email %></p><br>            
+        </div>
+    </div>
     </div>    
 </body>
 </html>

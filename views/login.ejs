@@ -3,21 +3,50 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Login</title>
     <% include css/head %>
+    <link href="./css/views_style.css" rel="stylesheet" />
+    <script>
+        var alert = function(){
+            console.log('aletr');
+            alert('close');
+        }
+    </script>
 </head>
-<body>
-    <form action="/login" method="post">
-        <!-- Email: <input type="text" name="email"><br /> -->
-        <span class="fa fa-user-circle fa-2x"></span>&nbsp;<input type="text" name="nickname"><br />
-        <span class="fa fa-lock fa-2x"></span>&nbsp;<input type="password" name="password"><br />
-        <input type="submit" value="Login" class="btn btn-dark"/>
-        You don't have an account? <a href="/signup">Signup</a> Or visit <a href='/'>home</a>
-    </form>
-    <% if (message.length > 0) { %>
-        <div>
-          <%= message %>
+<body> 
+    <div class="container">
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <%= message %>
+            </div>
+        <% } %>
+        <div class="col-sm-6 mx-auto">
+            <div class="card mt-5">
+            <div class="text-center">
+                <div class="card-header">
+                    <h1>User Login</h1>
+                </div>
+                <div class="card-body">
+                <form action="/login" method="post">
+                    <div class="input-group form-group" >
+                    <span class="fa fa-user-circle fa-lg fa-fw"></span>&nbsp;
+                    <input type="text" name="nickname" class="form-control-sm" placeholder="Username"><br />
+                    </div>
+                    <div class="input-group form-group" >
+                    <span class="fa fa-lock fa-lg fa-fw"></span>&nbsp;
+                    <input type="password" name="password" class="form-control-sm" placeholder="Password"><br />
+                    </div>
+                    <input type="submit" value="Login" class="btn btn-dark"/><br>
+                </form>
+                </div>
+                <div class="card-footer">
+                <p class="text-center">You don't have an account? <a href="/signup">Signup</a></p>
+                <p>Or visit <a href='/'>home</a></p>
+                </div>                
+            </div>
+            </div>
         </div>
-    <% } %>
+    </div>
 </body>
 </html>
