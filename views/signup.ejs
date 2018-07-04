@@ -14,10 +14,9 @@
     }
     </script>
     <% include css/head %>
-    <link href="./css/views_style.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <% if (message.length > 0) { %>
             <div class="alert alert-danger alert-dismissible fade show">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -37,7 +36,7 @@
                         <input class="form-control-sm" placeholder="Email" type="text" name="email" required id="email">
                     </div>
                     <div class="input-group form-group">
-                        <span class="fa fa-user-circle fa-lg fa-fw"></span>&nbsp;
+                        <span class="fa fa-user-circle fa-lg fa-fw"></span>
                         <input class="form-control-sm" placeholder="Username"type="text" name="username" required id="username">
                     </div>
                     <div class="input-group form-group">

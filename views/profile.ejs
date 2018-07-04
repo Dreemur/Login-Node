@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Profile</title>
     <% include css/head %>
-    <link href="./css/views_style.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark" style="color: white">
-        <ul class="navbar-nav">
+    <nav class="navbar justify-content-end bg-dark" style="color: white"> 
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <span class="fa fa-user-o fa-fw"></span>
-                Welcome,<%= user.local.nickname %>!
+                <label>Welcome,<%= user.local.nickname %>!</label>
             </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <span class="fa fa-sign-out fa-fw"></span>
                 <a href="/logout">Logout</a>
             </li>
         </ul>
     </nav>
+    
     <div class="container">
     <div class="card">
         <div class="card-header">
