@@ -1,12 +1,36 @@
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    /* text-align: right; */
+}
 
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+    /* text-align: left; */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 /* Desktop */
 @media only screen and (min-width: 1024px) {
-
+   
+   .col-25{
+    text-align: right; 
+    width: 40%;
+    padding-right: 10px;
+   }
+   .col-75{
+       text-align: left;
+       width:60%;
+   }
 }
-/* Mobile */
-@media only screen and (max-width: 768px) {
 
-}
 /* Table */
 @media only screen and (max-width: 1023px) {
     

@@ -32,6 +32,7 @@ app.use(passport.session());
 app.use(flash());
 
 require('./config/routing')(app,passport);
+app.use(express.static(__dirname + '/views/css'));  //refer to the css files in your template files
 
 app.listen(app.get('port'), () => {
     console.log(`server run on ${app.get('port')}` );

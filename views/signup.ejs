@@ -29,23 +29,23 @@
             <div class="card-header">
                 <h1>Sign up</h1>
             </div>
-            <div class="card-body">
+            <div class="card-body" >
                 <form action="/signup" method="post">
-                    <div class="input-group form-group">
-                        <span class="fa fa-envelope fa-lg fa-fw"></span>
-                        <input class="form-control-sm" placeholder="Email" type="text" name="email" required id="email">
+                    <div class="input-group form-group row">
+                        <div class="col-25"><span class="fa fa-envelope fa-lg fa-fw"></span></div>
+                        <div class="col-75"><input class="form-control-sm" placeholder="Email" type="text" name="email" required id="email"></div>
                     </div>
-                    <div class="input-group form-group">
-                        <span class="fa fa-user-circle fa-lg fa-fw"></span>
-                        <input class="form-control-sm" placeholder="Username"type="text" name="username" required id="username">
+                    <div class="input-group form-group row">
+                        <div class="col-25"><span class="fa fa-user-circle fa-lg fa-fw"></span></div>
+                        <div class="col-75"><input class="form-control-sm" placeholder="Username"type="text" name="username" required id="username"></div>
                     </div>
-                    <div class="input-group form-group">
-                        <span class="fa fa-key fa-lg fa-fw"></span>
-                        <input class="form-control-sm" placeholder="Password" type="password" name="password" id="password" required id="password">
+                    <div class="input-group form-group row">
+                        <div class="col-25"><span class="fa fa-key fa-lg fa-fw"></span></div>
+                        <div class="col-75"><input class="form-control-sm" placeholder="Password" type="password" name="password" id="password" required id="password"></div>
                     </div>
-                    <div class="input-group form-group">
-                        <span class="fa fa-key fa-lg fa-fw"></span>
-                        <input class="form-control-sm" placeholder="Confirm Password" type="password" onblur='check();' id="confirm_password" required><br/>
+                    <div class="input-group form-group row">
+                        <div class="col-25"><span class="fa fa-key fa-lg fa-fw"></span></div>
+                        <div class="col-75"><input class="form-control-sm" placeholder="Confirm Password" type="password" onblur='check();' id="confirm_password" required></div>
                     </div>                
                     <input type="submit" value="Signup" class="btn btn-dark">
                 </form>
