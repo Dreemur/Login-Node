@@ -1,11 +1,11 @@
-.col-25 {
+.col-icons {
     float: left;
     width: 25%;
     margin-top: 6px;
     /* text-align: right; */
 }
 
-.col-75 {
+.col-inputs {
     float: left;
     width: 75%;
     margin-top: 6px;
@@ -20,12 +20,12 @@
 /* Desktop */
 @media only screen and (min-width: 1024px) {
    
-   .col-25{
+   .col-icons{
     text-align: right; 
     width: 40%;
     padding-right: 10px;
    }
-   .col-75{
+   .col-inputs{
        text-align: left;
        width:60%;
    }
